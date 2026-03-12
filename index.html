@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IXmed Clinic — Многопрофильная клиника профессора Ирсалиева · Ташкент</title>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ixmed.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo">
+    <div class="logo-mark">IX</div>
+    <div class="logo-text">
+      <span class="logo-main">IXmed</span>
+      <span class="logo-sub ru">Клиника профессора</span>
+      <span class="logo-sub en">Professor's Clinic</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services"><span class="ru">Услуги</span><span class="en">Services</span></a></li>
+    <li><a href="#doctors"><span class="ru">Врачи</span><span class="en">Doctors</span></a></li>
+    <li><a href="#diagnostics"><span class="ru">Диагностика</span><span class="en">Diagnostics</span></a></li>
+    <li><a href="#reviews"><span class="ru">Отзывы</span><span class="en">Reviews</span></a></li>
+    <li><a href="#booking"><span class="ru">Запись</span><span class="en">Book</span></a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+      <span class="ru">Записаться</span><span class="en">Book Now</span>
+    </button>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="ru">Ташкент · Мирзо-Улугбек</span>
+        <span class="en">Tashkent · Mirzo-Ulugbek</span>
+      </div>
+      <h1>
+        <span class="ru">Многопрофильная<br>клиника <span class="accent">профессора<br>Ирсалиева</span></span>
+        <span class="en">Professor Irsaliev's<br><span class="accent">Multispecialty<br>Clinic</span></span>
+      </h1>
+      <p class="hero-desc ru">Высококвалифицированная медицинская помощь с точной диагностикой, современным оборудованием и внимательным подходом к каждому пациенту.</p>
+      <p class="hero-desc en">World-class medical care with precise diagnostics, modern equipment and a patient-first approach at every step.</p>
+      <div class="hero-actions">
+        <button class="btn-pink" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">
+          <span>📅</span>
+          <span class="ru">Записаться на приём</span>
+          <span class="en">Book Appointment</span>
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+          <span class="ru">Наши услуги →</span>
+          <span class="en">Our Services →</span>
+        </button>
+      </div>
+      <div class="hero-badges">
+        <div class="hbadge">
+          <div class="hbadge-icon">🏆</div>
+          <div class="hbadge-text">
+            <strong><span class="ru">20+ врачей</span><span class="en">20+ Doctors</span></strong>
+            <span><span class="ru">Высшие категории</span><span class="en">Top categories</span></span>
+          </div>
+        </div>
+        <div class="hbadge">
+          <div class="hbadge-icon">🔬</div>
+          <div class="hbadge-text">
+            <strong><span class="ru">МСКТ 08:00–23:00</span><span class="en">MSCT 08:00–23:00</span></strong>
+            <span><span class="ru">Расширенный график</span><span class="en">Extended hours</span></span>
+          </div>
+        </div>
+        <div class="hbadge">
+          <div class="hbadge-icon">⭐</div>
+          <div class="hbadge-text">
+            <strong>5.0 / 5.0</strong>
+            <span><span class="ru">Рейтинг клиники</span><span class="en">Clinic rating</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="float-card main">
+        <div class="fc-label ru">Клиника профессора · Ташкент</div>
+        <div class="fc-label en">Professor's Clinic · Tashkent</div>
+        <div class="fc-title ru">IXmed — медицина нового уровня</div>
+        <div class="fc-title en">IXmed — Next-Level Medicine</div>
+        <div class="fc-sub ru">Точная диагностика · Эффективное лечение · Доступные цены</div>
+        <div class="fc-sub en">Precise diagnostics · Effective treatment · Affordable prices</div>
+        <div class="fc-stats">
+          <div><div class="fc-stat-num">20+</div><div class="fc-stat-lbl ru">Врачей</div><div class="fc-stat-lbl en">Doctors</div></div>
+          <div><div class="fc-stat-num">15+</div><div class="fc-stat-lbl ru">Лет опыта</div><div class="fc-stat-lbl en">Years</div></div>
+          <div><div class="fc-stat-num">5★</div><div class="fc-stat-lbl ru">Рейтинг</div><div class="fc-stat-lbl en">Rating</div></div>
+        </div>
+      </div>
+      <div class="float-card small1">
+        <div class="fc-pill ru">МСКТ доступно</div>
+        <div class="fc-pill en">MSCT available</div>
+        <div style="font-size:.85rem;font-weight:700;color:var(--heading)" class="ru">08:00 – 23:00</div>
+        <div style="font-size:.85rem;font-weight:700;color:var(--heading)" class="en">08:00 – 23:00</div>
+        <div style="font-size:.72rem;color:var(--mid);margin-top:.3rem" class="ru">Ежедневно</div>
+        <div style="font-size:.72rem;color:var(--mid);margin-top:.3rem" class="en">Every day</div>
+      </div>
+      <div class="float-card small2">
+        <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem" class="ru">Адрес клиники</div>
+        <div style="font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem" class="en">Clinic address</div>
+        <div style="font-size:.82rem;font-weight:600;color:var(--heading);line-height:1.4" class="ru">ул. Равнак, 41<br>Мирзо-Улугбек, Ташкент</div>
+        <div style="font-size:.82rem;font-weight:600;color:var(--heading);line-height:1.4" class="en">Ravnak st., 41<br>Mirzo-Ulugbek, Tashkent</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="tick-item ru">Терапевт</span><span class="tick-item ru">Кардиолог</span>
+    <span class="tick-item ru">Гинекология</span><span class="tick-item ru">Репродуктология · ЭКО</span>
+    <span class="tick-item ru">МСКТ диагностика</span><span class="tick-item ru">Стоматология</span>
+    <span class="tick-item ru">УЗИ</span><span class="tick-item ru">Невролог</span>
+    <span class="tick-item ru">Лаборатория</span><span class="tick-item ru">ЛОР</span>
+    <span class="tick-item ru">Физиотерапия · Массаж</span><span class="tick-item ru">Эндокринология</span>
+    <span class="tick-item ru">Дерматология</span><span class="tick-item ru">Урология · Андрология</span>
+    <span class="tick-item en">Therapist</span><span class="tick-item en">Cardiology</span>
+    <span class="tick-item en">Gynaecology</span><span class="tick-item en">Reproductology · IVF</span>
+    <span class="tick-item en">MSCT Diagnostics</span><span class="tick-item en">Dentistry</span>
+    <span class="tick-item en">Ultrasound</span><span class="tick-item en">Neurology</span>
+    <span class="tick-item en">Laboratory</span><span class="tick-item en">ENT</span>
+    <span class="tick-item en">Physiotherapy · Massage</span><span class="tick-item en">Endocrinology</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num">20+</div>
+      <div class="stat-lbl ru">Специалистов</div>
+      <div class="stat-lbl en">Specialists</div>
+      <div class="stat-sub ru">Высшие и первые категории</div>
+      <div class="stat-sub en">Top & first categories</div>
+    </div>
+    <div class="stat-item reveal rd1">
+      <div class="stat-num">55</div>
+      <div class="stat-lbl ru">Лет опыта</div>
+      <div class="stat-lbl en">Years of experience</div>
+      <div class="stat-sub ru">Старший врач Ирсалиев Х.И.</div>
+      <div class="stat-sub en">Sr. doctor Irsaliev H.I.</div>
+    </div>
+    <div class="stat-item reveal rd2">
+      <div class="stat-num">5★</div>
+      <div class="stat-lbl ru">Рейтинг на Clinics.uz</div>
+      <div class="stat-lbl en">Rating on Clinics.uz</div>
+      <div class="stat-sub ru">Максимальная оценка</div>
+      <div class="stat-sub en">Maximum score</div>
+    </div>
+    <div class="stat-item reveal rd3">
+      <div class="stat-num">15h</div>
+      <div class="stat-lbl ru">Работа МСКТ</div>
+      <div class="stat-lbl en">MSCT hours</div>
+      <div class="stat-sub ru">08:00 – 23:00 каждый день</div>
+      <div class="stat-sub en">08:00 – 23:00 every day</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-top reveal">
+      <div>
+        <div class="sec-label ru">Направления</div>
+        <div class="sec-label en">Specialities</div>
+        <h2 class="sec-title ru">Наши <span class="p">услуги</span></h2>
+        <h2 class="sec-title en">Our <span class="p">services</span></h2>
+      </div>
+      <p class="sec-sub ru">Широкий спектр медицинских услуг — консультации специалистов, диагностика, лечение и реабилитация под одной крышей.</p>
+      <p class="sec-sub en">A full range of medical services — specialist consultations, diagnostics, treatment and rehabilitation under one roof.</p>
+    </div>
+    <div class="services-grid reveal rd1">
+      <div class="svc-card">
+        <div class="svc-icon">🩺</div>
+        <div class="svc-name ru">Консультации врачей</div>
+        <div class="svc-name en">Doctor Consultations</div>
+        <div class="svc-items">
+          <div class="svc-item ru">Терапевт · Кардиолог</div>
+          <div class="svc-item ru">Невролог · Аллерголог</div>
+          <div class="svc-item ru">ЛОР · Дерматолог</div>
+          <div class="svc-item ru">Эндокринолог · Уролог</div>
+          <div class="svc-item en">Therapist · Cardiologist</div>
+          <div class="svc-item en">Neurologist · Allergist</div>
+          <div class="svc-item en">ENT · Dermatologist</div>
+          <div class="svc-item en">Endocrinologist · Urologist</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🧬</div>
+        <div class="svc-name ru">Репродуктология</div>
+        <div class="svc-name en">Reproductology</div>
+        <div class="svc-items">
+          <div class="svc-item ru">ЭКО · ВМИ</div>
+          <div class="svc-item ru">Лечение бесплодия</div>
+          <div class="svc-item ru">TESE · TESA</div>
+          <div class="svc-item ru">Гистероскопия</div>
+          <div class="svc-item en">IVF · IUI</div>
+          <div class="svc-item en">Infertility treatment</div>
+          <div class="svc-item en">TESE · TESA</div>
+          <div class="svc-item en">Hysteroscopy</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🔬</div>
+        <div class="svc-name ru">Диагностика</div>
+        <div class="svc-name en">Diagnostics</div>
+        <div class="svc-items">
+          <div class="svc-item ru">МСКТ (08:00–23:00)</div>
+          <div class="svc-item ru">УЗИ · Лаборатория</div>
+          <div class="svc-item ru">ПЦР · ИФА · Биохимия</div>
+          <div class="svc-item ru">Бактериология</div>
+          <div class="svc-item en">MSCT (08:00–23:00)</div>
+          <div class="svc-item en">Ultrasound · Laboratory</div>
+          <div class="svc-item en">PCR · ELISA · Biochemistry</div>
+          <div class="svc-item en">Bacteriology</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🦷</div>
+        <div class="svc-name ru">Стоматология</div>
+        <div class="svc-name en">Dentistry</div>
+        <div class="svc-items">
+          <div class="svc-item ru">Терапевтическая</div>
+          <div class="svc-item ru">Ортопедическая</div>
+          <div class="svc-item ru">Хирургическая</div>
+          <div class="svc-item ru">Ортодонтия · Импланты</div>
+          <div class="svc-item en">Therapeutic</div>
+          <div class="svc-item en">Orthopaedic</div>
+          <div class="svc-item en">Surgical</div>
+          <div class="svc-item en">Orthodontics · Implants</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">💆</div>
+        <div class="svc-name ru">Физиотерапия</div>
+        <div class="svc-name en">Physiotherapy</div>
+        <div class="svc-items">
+          <div class="svc-item ru">Массаж · Мануальная терапия</div>
+          <div class="svc-item ru">Электрофорез · ДДТ</div>
+          <div class="svc-item ru">Амплипульс · УЗТ</div>
+          <div class="svc-item ru">Дарсонваль · Парафин</div>
+          <div class="svc-item en">Massage · Manual therapy</div>
+          <div class="svc-item en">Electrophoresis · DDT</div>
+          <div class="svc-item en">Amplipulse · UST</div>
+          <div class="svc-item en">Darsonval · Paraffin</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">👶</div>
+        <div class="svc-name ru">Гинекология</div>
+        <div class="svc-name en">Gynaecology</div>
+        <div class="svc-items">
+          <div class="svc-item ru">Консультация гинеколога</div>
+          <div class="svc-item ru">УЗИ малого таза</div>
+          <div class="svc-item ru">Врач высшей категории</div>
+          <div class="svc-item ru">Стаж 42 года</div>
+          <div class="svc-item en">Gynaecologist consultation</div>
+          <div class="svc-item en">Pelvic ultrasound</div>
+          <div class="svc-item en">Top-category specialist</div>
+          <div class="svc-item en">42 years experience</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🫀</div>
+        <div class="svc-name ru">Кардиология</div>
+        <div class="svc-name en">Cardiology</div>
+        <div class="svc-items">
+          <div class="svc-item ru">ЭКГ · Эхокардиография</div>
+          <div class="svc-item ru">Холтер-мониторинг</div>
+          <div class="svc-item ru">Врач высшей категории</div>
+          <div class="svc-item ru">35 лет опыта</div>
+          <div class="svc-item en">ECG · Echocardiography</div>
+          <div class="svc-item en">Holter monitoring</div>
+          <div class="svc-item en">Top-category specialist</div>
+          <div class="svc-item en">35 years experience</div>
+        </div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🧠</div>
+        <div class="svc-name ru">Неврология</div>
+        <div class="svc-name en">Neurology</div>
+        <div class="svc-items">
+          <div class="svc-item ru">Взрослые и дети</div>
+          <div class="svc-item ru">Психотерапия · Психология</div>
+          <div class="svc-item ru">Степень PhD</div>
+          <div class="svc-item ru">Консультация и лечение</div>
+          <div class="svc-item en">Adults and children</div>
+          <div class="svc-item en">Psychotherapy · Psychology</div>
+          <div class="svc-item en">PhD specialists</div>
+          <div class="svc-item en">Consultation & treatment</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="doctors-section" id="doctors">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+      <div class="sec-label ru" style="justify-content:center">Специалисты</div>
+      <div class="sec-label en" style="justify-content:center">Our Team</div>
+      <h2 class="sec-title ru">Наши <span class="p">врачи</span></h2>
+      <h2 class="sec-title en">Our <span class="p">doctors</span></h2>
+      <p class="sec-sub ru" style="margin:0 auto;text-align:center">Опытная команда специалистов с высшими категориями, учёными степенями и многолетней практикой</p>
+      <p class="sec-sub en" style="margin:0 auto;text-align:center">An experienced team of top-category specialists with academic degrees and decades of practice</p>
+    </div>
+    <div class="doctors-grid reveal rd1">
+      <div class="doc-card">
+        <div class="doc-photo">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Иммунолог</div>
+          <div class="doc-specialty-tag en">Immunologist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Ирсалиева Фатима Х.</div>
+          <div class="doc-role ru">Аллерголог-иммунолог</div>
+          <div class="doc-role en">Allergist-Immunologist</div>
+          <div class="doc-exp ru">Стаж 27 лет</div>
+          <div class="doc-exp en">27 years experience</div>
+          <div class="doc-degree ru">Доктор мед. наук · Высшая категория</div>
+          <div class="doc-degree en">Doctor of Medicine · Top Category</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo" style="background:linear-gradient(160deg,#f0e8ec,#e8dfe4)">
+          <div class="doc-emoji">👨‍⚕️</div>
+          <div class="doc-specialty-tag ru">Стоматолог</div>
+          <div class="doc-specialty-tag en">Dentist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Ирсалиев Хуснитдин И.</div>
+          <div class="doc-role ru">Стоматолог</div>
+          <div class="doc-role en">Dentist</div>
+          <div class="doc-exp ru">Стаж 55 лет</div>
+          <div class="doc-exp en">55 years experience</div>
+          <div class="doc-degree ru">Доктор мед. наук</div>
+          <div class="doc-degree en">Doctor of Medicine</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Гинеколог</div>
+          <div class="doc-specialty-tag en">Gynaecologist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Ходжаева Мукофат И.</div>
+          <div class="doc-role ru">Гинеколог</div>
+          <div class="doc-role en">Gynaecologist</div>
+          <div class="doc-exp ru">Стаж 42 года</div>
+          <div class="doc-exp en">42 years experience</div>
+          <div class="doc-degree ru">Врач высшей категории</div>
+          <div class="doc-degree en">Top Category Specialist</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo" style="background:linear-gradient(160deg,#f0e8ec,#e8dfe4)">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Кардиолог</div>
+          <div class="doc-specialty-tag en">Cardiologist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Алимова Насиба А.</div>
+          <div class="doc-role ru">Кардиолог</div>
+          <div class="doc-role en">Cardiologist</div>
+          <div class="doc-exp ru">Стаж 35 лет</div>
+          <div class="doc-exp en">35 years experience</div>
+          <div class="doc-degree ru">Врач высшей категории</div>
+          <div class="doc-degree en">Top Category Specialist</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Врач УЗИ</div>
+          <div class="doc-specialty-tag en">Ultrasound</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Парманова Нилуфар Б.</div>
+          <div class="doc-role ru">Врач УЗИ</div>
+          <div class="doc-role en">Ultrasound Specialist</div>
+          <div class="doc-exp ru">Стаж 30 лет</div>
+          <div class="doc-exp en">30 years experience</div>
+          <div class="doc-degree ru">Врач высшей категории</div>
+          <div class="doc-degree en">Top Category Specialist</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo" style="background:linear-gradient(160deg,#f0e8ec,#e8dfe4)">
+          <div class="doc-emoji">👨‍⚕️</div>
+          <div class="doc-specialty-tag ru">Пульмонолог</div>
+          <div class="doc-specialty-tag en">Pulmonologist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Умаров Фаррух Н.</div>
+          <div class="doc-role ru">Пульмонолог</div>
+          <div class="doc-role en">Pulmonologist</div>
+          <div class="doc-exp ru">Стаж 42 года</div>
+          <div class="doc-exp en">42 years experience</div>
+          <div class="doc-degree ru">Высшая квалификация</div>
+          <div class="doc-degree en">Top qualification</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Невролог</div>
+          <div class="doc-specialty-tag en">Neurologist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Акбарходжаева Зиёда А.</div>
+          <div class="doc-role ru">Невролог</div>
+          <div class="doc-role en">Neurologist</div>
+          <div class="doc-exp ru">Стаж 12 лет</div>
+          <div class="doc-exp en">12 years experience</div>
+          <div class="doc-degree ru">Степень PhD · 1-я категория</div>
+          <div class="doc-degree en">PhD · 1st Category</div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-photo" style="background:linear-gradient(160deg,#f0e8ec,#e8dfe4)">
+          <div class="doc-emoji">👩‍⚕️</div>
+          <div class="doc-specialty-tag ru">Психотерапевт</div>
+          <div class="doc-specialty-tag en">Psychotherapist</div>
+        </div>
+        <div class="doc-info">
+          <div class="doc-name">Джалилова Сожида Х.</div>
+          <div class="doc-role ru">Психотерапевт · Психолог</div>
+          <div class="doc-role en">Psychotherapist · Psychologist</div>
+          <div class="doc-exp ru">Стаж 10 лет</div>
+          <div class="doc-exp en">10 years experience</div>
+          <div class="doc-degree ru">Степень PhD</div>
+          <div class="doc-degree en">PhD Degree</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNOSTICS -->
+<section class="diag-section" id="diagnostics">
+  <div class="container">
+    <div class="diag-inner">
+      <div class="diag-visual reveal">
+        <div class="diag-screen">
+          <div class="diag-screen-top ru">МСКТ · Доступные зоны исследования</div>
+          <div class="diag-screen-top en">MSCT · Available scan zones</div>
+          <div class="diag-list">
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ головного мозга</span><span class="diag-row-name en">Brain MSCT</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ органов грудной клетки</span><span class="diag-row-name en">Chest MSCT</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ брюшной полости</span><span class="diag-row-name en">Abdomen MSCT</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ позвоночника (все отделы)</span><span class="diag-row-name en">Spine MSCT (all levels)</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ суставов</span><span class="diag-row-name en">Joints MSCT</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+            <div class="diag-row"><span class="diag-row-name ru">МСКТ с контрастированием</span><span class="diag-row-name en">Contrast-enhanced MSCT</span><span class="diag-row-tag ru">Доступно</span><span class="diag-row-tag en">Available</span></div>
+          </div>
+        </div>
+        <div class="diag-float">
+          <div class="diag-float-num ru">08–23</div>
+          <div class="diag-float-num en">08–23</div>
+          <div class="diag-float-lbl ru">Каждый день</div>
+          <div class="diag-float-lbl en">Every day</div>
+        </div>
+      </div>
+      <div class="diag-content reveal rd2">
+        <div class="sec-label ru">Диагностика</div>
+        <div class="sec-label en">Diagnostics</div>
+        <h2 class="sec-title ru">МСКТ и <span class="p">современная<br>диагностика</span></h2>
+        <h2 class="sec-title en">MSCT & <span class="p">Modern<br>Diagnostics</span></h2>
+        <p class="sec-sub ru" style="margin-bottom:2rem">Мультиспиральная компьютерная томография на современном оборудовании мирового уровня. Более 30 зон исследования. Результаты в день обращения.</p>
+        <p class="sec-sub en" style="margin-bottom:2rem">Multislice CT scanning on world-class equipment. Over 30 scan zones available. Results on the same day.</p>
+        <div class="diag-features">
+          <div class="diag-feat">
+            <div class="diag-feat-icon">⚡</div>
+            <div>
+              <div class="diag-feat-title ru">Расширенный график: 08:00–23:00</div>
+              <div class="diag-feat-title en">Extended hours: 08:00–23:00</div>
+              <div class="diag-feat-desc ru">Удобно для занятых пациентов — без долгого ожидания</div>
+              <div class="diag-feat-desc en">Convenient for busy patients — no long waiting</div>
+            </div>
+          </div>
+          <div class="diag-feat">
+            <div class="diag-feat-icon">🎯</div>
+            <div>
+              <div class="diag-feat-title ru">Точность мирового уровня</div>
+              <div class="diag-feat-title en">World-class precision</div>
+              <div class="diag-feat-desc ru">Оборудование ведущих мировых производителей</div>
+              <div class="diag-feat-desc en">Equipment from leading global manufacturers</div>
+            </div>
+          </div>
+          <div class="diag-feat">
+            <div class="diag-feat-icon">📋</div>
+            <div>
+              <div class="diag-feat-title ru">Результат в тот же день</div>
+              <div class="diag-feat-title en">Same-day results</div>
+              <div class="diag-feat-desc ru">Заключение рентгенолога с опытом 28+ лет</div>
+              <div class="diag-feat-desc en">Report by radiologist with 28+ years experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:540px;margin:0 auto">
+      <div class="sec-label ru" style="justify-content:center">Отзывы</div>
+      <div class="sec-label en" style="justify-content:center">Reviews</div>
+      <h2 class="sec-title ru">Что говорят <span class="p">пациенты</span></h2>
+      <h2 class="sec-title en">What <span class="p">patients</span> say</h2>
+    </div>
+    <div class="reviews-grid reveal rd1">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text ru">«Место хорошее, персонал уважительно выслушивает. Делали МСКТ грудных лёгких — всё прошло быстро и профессионально. Рекомендуем!»</div>
+        <div class="review-text en">"Great place, staff listens respectfully. We had a chest CT scan — everything went quickly and professionally. Highly recommend!"</div>
+        <div class="review-author">
+          <div class="review-avatar">😊</div>
+          <div>
+            <div class="review-name">Xasan</div>
+            <div class="review-date">07.05.2023 · Clinics.uz</div>
+          </div>
+        </div>
+        <div class="review-tag ru">МСКТ</div>
+        <div class="review-tag en">MSCT</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text ru">«Отличная клиника! Врачи внимательные, оборудование современное. Прошли полное обследование всей семьёй — остались очень довольны.»</div>
+        <div class="review-text en">"Excellent clinic! Attentive doctors, modern equipment. Our whole family had a full check-up — very satisfied with the results."</div>
+        <div class="review-author">
+          <div class="review-avatar">😊</div>
+          <div>
+            <div class="review-name ru">Пациент клиники</div>
+            <div class="review-name en">Clinic Patient</div>
+            <div class="review-date">2024 · Google Maps</div>
+          </div>
+        </div>
+        <div class="review-tag ru">Семейный визит</div>
+        <div class="review-tag en">Family visit</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text ru">«Обратилась по вопросу репродуктологии. Врачи объяснили всё подробно, назначили грамотное лечение. Очень профессиональный подход.»</div>
+        <div class="review-text en">"I came for reproductive health issues. Doctors explained everything in detail and prescribed proper treatment. Very professional approach."</div>
+        <div class="review-author">
+          <div class="review-avatar">😊</div>
+          <div>
+            <div class="review-name ru">Пациентка</div>
+            <div class="review-name en">Patient</div>
+            <div class="review-date">2024 · Clinics.uz</div>
+          </div>
+        </div>
+        <div class="review-tag ru">Репродуктология</div>
+        <div class="review-tag en">Reproductology</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking-section" id="booking">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:540px;margin:0 auto">
+      <div class="sec-label ru" style="justify-content:center">Запись</div>
+      <div class="sec-label en" style="justify-content:center">Book Now</div>
+      <h2 class="sec-title ru">Запишитесь <span class="p">онлайн</span></h2>
+      <h2 class="sec-title en">Book <span class="p">online</span></h2>
+      <p class="sec-sub ru" style="margin:0 auto;text-align:center">Оставьте заявку — перезвоним и подберём удобное время</p>
+      <p class="sec-sub en" style="margin:0 auto;text-align:center">Leave a request — we'll call back and find a convenient time</p>
+    </div>
+    <div class="booking-wrap">
+      <div class="reveal">
+        <div class="booking-steps">
+          <div class="bstep">
+            <div class="bstep-n">1</div>
+            <div>
+              <div class="bstep-title ru">Оставьте заявку</div>
+              <div class="bstep-title en">Submit a request</div>
+              <div class="bstep-desc ru">Заполните форму или позвоните нам напрямую</div>
+              <div class="bstep-desc en">Fill in the form or call us directly</div>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-n">2</div>
+            <div>
+              <div class="bstep-title ru">Подтверждение</div>
+              <div class="bstep-title en">Confirmation</div>
+              <div class="bstep-desc ru">Администратор перезвонит и уточнит время</div>
+              <div class="bstep-desc en">Our administrator will call back and confirm the time</div>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-n">3</div>
+            <div>
+              <div class="bstep-title ru">Приходите в клинику</div>
+              <div class="bstep-title en">Visit the clinic</div>
+              <div class="bstep-desc ru">ул. Равнак, 41 · Ориентир: Военный госпиталь</div>
+              <div class="bstep-desc en">Ravnak st., 41 · Landmark: Military Hospital</div>
+            </div>
+          </div>
+          <div class="bstep">
+            <div class="bstep-n">4</div>
+            <div>
+              <div class="bstep-title ru">Точный диагноз и лечение</div>
+              <div class="bstep-title en">Precise diagnosis & treatment</div>
+              <div class="bstep-desc ru">Квалифицированная помощь на современном оборудовании</div>
+              <div class="bstep-desc en">Qualified care with modern equipment</div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-list">
+          <a class="contact-item" href="tel:+998332060020">
+            <div class="c-ico">📞</div>
+            <div>
+              <div class="c-lbl ru">Телефон</div><div class="c-lbl en">Phone</div>
+              <div class="c-val">+998 33 206 00 20</div>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="c-ico">📍</div>
+            <div>
+              <div class="c-lbl ru">Адрес</div><div class="c-lbl en">Address</div>
+              <div class="c-val ru">ул. Равнак, 41, Мирзо-Улугбек, Ташкент</div>
+              <div class="c-val en">Ravnak st., 41, Mirzo-Ulugbek, Tashkent</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-ico">🕐</div>
+            <div>
+              <div class="c-lbl ru">МСКТ — режим работы</div><div class="c-lbl en">MSCT working hours</div>
+              <div class="c-val">08:00 – 23:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-form reveal rd2">
+        <div class="form-title ru">Записаться на приём</div>
+        <div class="form-title en">Book an Appointment</div>
+        <div class="form-sub ru">Заполните форму — ответим в течение 30 минут</div>
+        <div class="form-sub en">Fill in the form — we'll reply within 30 minutes</div>
+        <div class="frow">
+          <div class="fg">
+            <label class="fl ru">Имя</label><label class="fl en">Name</label>
+            <input id="f_name" class="fi" type="text" placeholder="Ваше имя / Your name">
+          </div>
+          <div class="fg">
+            <label class="fl ru">Телефон</label><label class="fl en">Phone</label>
+            <input id="f_phone" class="fi" type="tel" placeholder="+998 90 000 00 00">
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl ru">Нужный специалист</label><label class="fl en">Specialist needed</label>
+          <select id="f_doc" class="fsel">
+            <option value="" class="ru">— Выберите направление —</option>
+            <option value="" class="en">— Choose direction —</option>
+            <option class="ru">Терапевт</option><option class="en">Therapist</option>
+            <option class="ru">Кардиолог</option><option class="en">Cardiologist</option>
+            <option class="ru">Гинеколог</option><option class="en">Gynaecologist</option>
+            <option class="ru">Репродуктолог / ЭКО</option><option class="en">Reproductologist / IVF</option>
+            <option class="ru">МСКТ диагностика</option><option class="en">MSCT Diagnostics</option>
+            <option class="ru">Невролог</option><option class="en">Neurologist</option>
+            <option class="ru">Стоматолог</option><option class="en">Dentist</option>
+            <option class="ru">Эндокринолог</option><option class="en">Endocrinologist</option>
+            <option class="ru">Уролог / Андролог</option><option class="en">Urologist / Andrologist</option>
+            <option class="ru">ЛОР</option><option class="en">ENT</option>
+            <option class="ru">Физиотерапия / Массаж</option><option class="en">Physiotherapy / Massage</option>
+            <option class="ru">Не знаю — помогите выбрать</option><option class="en">Not sure — help me choose</option>
+          </select>
+        </div>
+        <div class="frow">
+          <div class="fg">
+            <label class="fl ru">Дата</label><label class="fl en">Date</label>
+            <input id="f_date" class="fi" type="date">
+          </div>
+          <div class="fg">
+            <label class="fl ru">Время</label><label class="fl en">Time</label>
+            <select id="f_time" class="fsel">
+              <option value="">—</option>
+              <option>09:00</option><option>10:00</option><option>11:00</option>
+              <option>12:00</option><option>14:00</option><option>15:00</option>
+              <option>16:00</option><option>17:00</option><option>18:00</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl ru">Сообщение</label><label class="fl en">Message</label>
+          <textarea id="f_note" class="fta" placeholder="Опишите причину обращения... / Describe your reason..."></textarea>
+        </div>
+        <button class="fsub" onclick="submitForm()">
+          <span class="ru">📅 Записаться на приём</span>
+          <span class="en">📅 Book Appointment</span>
+        </button>
+        <div class="fnote ru">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
+        <div class="fnote en">By clicking the button you agree to personal data processing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="f-logo-main">IXmed Clinic</div>
+      <div class="f-logo-sub ru">Клиника профессора Ирсалиева</div>
+      <div class="f-logo-sub en">Professor Irsaliev's Clinic</div>
+      <div class="f-brand-desc ru">Многопрофильная клиника с современным оборудованием, квалифицированным персоналом и высоким уровнем сервиса в Ташкенте.</div>
+      <div class="f-brand-desc en">A multispecialty clinic with modern equipment, qualified staff and high service standards in Tashkent.</div>
+      <div class="f-social">
+        <a href="https://www.instagram.com/ixmed_clinic/" class="f-soc" target="_blank">📸</a>
+        <a href="tel:+998332060020" class="f-soc">📞</a>
+      </div>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title ru">Услуги</div>
+      <div class="fcol-title en">Services</div>
+      <ul>
+        <li><a href="#"><span class="ru">Консультации врачей</span><span class="en">Consultations</span></a></li>
+        <li><a href="#"><span class="ru">Репродуктология</span><span class="en">Reproductology</span></a></li>
+        <li><a href="#"><span class="ru">МСКТ диагностика</span><span class="en">MSCT Diagnostics</span></a></li>
+        <li><a href="#"><span class="ru">Стоматология</span><span class="en">Dentistry</span></a></li>
+        <li><a href="#"><span class="ru">Физиотерапия</span><span class="en">Physiotherapy</span></a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title ru">Клиника</div>
+      <div class="fcol-title en">Clinic</div>
+      <ul>
+        <li><a href="#"><span class="ru">О нас</span><span class="en">About us</span></a></li>
+        <li><a href="#doctors"><span class="ru">Врачи</span><span class="en">Doctors</span></a></li>
+        <li><a href="#reviews"><span class="ru">Отзывы</span><span class="en">Reviews</span></a></li>
+        <li><a href="#booking"><span class="ru">Записаться</span><span class="en">Book now</span></a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title ru">Контакты</div>
+      <div class="fcol-title en">Contacts</div>
+      <ul>
+        <li><a href="tel:+998332060020">+998 33 206 00 20</a></li>
+        <li><a href="#"><span class="ru">ул. Равнак, 41</span><span class="en">Ravnak st., 41</span></a></li>
+        <li><a href="#"><span class="ru">Мирзо-Улугбек, Ташкент</span><span class="en">Mirzo-Ulugbek, Tashkent</span></a></li>
+        <li><a href="https://www.instagram.com/ixmed_clinic/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 IXmed Clinic · <span class="ru">Все права защищены</span><span class="en">All rights reserved</span></span>
+    <div class="footer-live"><span class="ru">Клиника работает</span><span class="en">Clinic is open</span></div>
+    <span><span class="ru">Ташкент, Узбекистан</span><span class="en">Tashkent, Uzbekistan</span></span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span class="toast-msg" style="color:var(--dark)" id="toastMsg"></span>
+</div>
+
+<script src="ixmed.js"></script>
+</body>
+</html>
