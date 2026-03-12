@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: UnknoWnCoder998/IXmed
   branch: main
 
 media_folder: "images"
@@ -12,4 +13,5 @@ collections:
     create: true
     fields:
       - {label: "Название", name: "title", widget: "string"}
+
       - {label: "Описание", name: "body", widget: "text"}
